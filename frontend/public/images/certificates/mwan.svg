@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" width="100%" height="100%">
+  <!-- Icon Tile -->
+  <g transform="translate(6, 6)">
+    <rect width="52" height="52" rx="14" fill="#047857"/>
+    <!-- Recycle mobius loop in crisp white and bright mint -->
+    <path d="M 26,14 C 33,14 38,19 38,26 C 38,29 36,32 33,34 L 30,30 C 32,29 33,27 33,26 C 33,22 30,19 26,19 L 26,22 L 20,16.5 L 26,11 Z" fill="#ffffff"/>
+    <path d="M 26,38 C 19,38 14,33 14,26 C 14,23 16,20 19,18 L 22,22 C 20,23 19,25 19,26 C 19,30 22,33 26,33 L 26,30 L 32,35.5 L 26,41 Z" fill="#6ee7b7"/>
+    <circle cx="26" cy="26" r="3.5" fill="#34d399"/>
+  </g>
+  <!-- Text -->
+  <text x="68" y="29" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="21" fill="#064e3b" letter-spacing="1">MWAN</text>
+  <text x="69" y="42" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8.5" fill="#059669" letter-spacing="0.5">WASTE MANAGEMENT</text>
+  <text x="69" y="52" font-family="'Montserrat', sans-serif" font-weight="700" font-size="7.5" fill="#64748b" letter-spacing="0.4">NATIONAL CENTER · KSA</text>
+</svg>
