@@ -170,6 +170,12 @@ body::-webkit-scrollbar {
 
 /* ── Ticker ── */
 @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes marqueeLeft { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes marqueeRight { 0%{transform:translateX(-50%)} 100%{transform:translateX(0)} }
+.animate-marquee-left { display: flex; width: max-content; animation: marqueeLeft 42s linear infinite; }
+.animate-marquee-right { display: flex; width: max-content; animation: marqueeRight 46s linear infinite; }
+.marquee-row:hover .animate-marquee-left,
+.marquee-row:hover .animate-marquee-right { animation-play-state: paused; }
 .ticker-content { display: flex; animation: ticker 30s linear infinite; white-space: nowrap; }
 .ticker-content:hover { animation-play-state: paused; }
 

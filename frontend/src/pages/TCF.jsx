@@ -247,9 +247,6 @@ export default function TCF() {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-slate-900 leading-[1.15]">
                   Temporary Construction <span className="grad-text">Facilities (TCF)</span>
                 </h1>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-                  Turnkey engineering, rapid off-site fabrication, 48-hour delivery, and full-lifecycle maintenance of heavy-duty modular offices, workforce accommodations, chemical sanitation, and certified medical isolation cabins across Saudi Arabia.
-                </p>
               </div>
 
               {/* Quick Action CTAs */}

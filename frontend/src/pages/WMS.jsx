@@ -243,9 +243,6 @@ export default function WMS() {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-slate-900 leading-[1.15]">
                   Industrial Waste Management &amp; <span className="grad-text">Recycling</span>
                 </h1>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-                  End-to-end hazardous liquid logistics, mobile sludge centrifuging, on-site chemical neutralization, and certified zero-landfill diversion. Fully compliant with NCEC, MWAN, Saudi Aramco, and the Saudi Green Initiative.
-                </p>
               </div>
 
               {/* Quick Action CTAs */}

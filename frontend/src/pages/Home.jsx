@@ -78,37 +78,53 @@ const interactiveServices = [
 ];
 
 // Sovereign clients with official high-resolution vector and transparent logos
-const sovereignClients = [
-  {
-    name: "Saudi Aramco",
-    logo: "/images/clients/aramco.svg",
-    className: "h-9 max-h-9 w-auto max-w-[135px] object-contain",
-  },
-  {
-    name: "SABIC",
-    logo: "/images/clients/sabic.svg",
-    className: "h-8 max-h-8 w-auto max-w-[125px] object-contain",
-  },
-  {
-    name: "Saudi Electricity Company",
-    logo: "/images/clients/sec.png",
-    className: "h-10 max-h-10 w-auto max-w-[150px] object-contain",
-  },
-  {
-    name: "Ma'aden",
-    logo: "/images/clients/maaden.svg",
-    className: "h-8 max-h-8 w-auto max-w-[130px] object-contain",
-  },
-  {
-    name: "Royal Commission for Jubail & Yanbu",
-    logo: "/images/clients/rcjy.svg",
-    className: "h-11 max-h-11 w-auto max-w-[120px] object-contain",
-  },
-  {
-    name: "NEOM",
-    logo: "/images/clients/neom.svg",
-    className: "h-7 max-h-7 w-auto max-w-[125px] object-contain",
-  },
+const clientRows = [
+  // Row 1 (moves left)
+  [
+    { name: "Saudi Aramco", logo: "/images/clients/partners/aramco.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "SABIC", logo: "/images/clients/partners/sabic.webp", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Ma'aden", logo: "/images/clients/partners/maaden.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Satorp", logo: "/images/clients/partners/satorp.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Samsung Engineering", logo: "/images/clients/partners/samsung.jpg", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Hadeed", logo: "/images/clients/partners/hadeed.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "bfim", logo: "/images/clients/partners/bfim.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "NGMSA", logo: "/images/clients/partners/ngmsa.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "KAEFER", logo: "/images/clients/partners/kaefer.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Técnicas Reunidas", logo: "/images/clients/partners/tecnicas_reunidas.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Larsen & Toubro", logo: "/images/clients/partners/lt.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+  ],
+  // Row 2 (moves right)
+  [
+    { name: "SAIPEM", logo: "/images/clients/partners/saipem.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Arabian Drilling", logo: "/images/clients/partners/arabian_drilling.jpg", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Kuwait Joint Operation", logo: "/images/clients/partners/kjo.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Nesma United Industries", logo: "/images/clients/partners/nesma.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Hyundai Engineering & Construction", logo: "/images/clients/partners/hyundai.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "ELECO", logo: "/images/clients/partners/eleco.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "HEISCO", logo: "/images/clients/partners/heisco.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "El Seif", logo: "/images/clients/partners/el_seif.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Kuwait & Al-Muna", logo: "/images/clients/partners/kuwait_muna.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "webuild", logo: "/images/clients/partners/webuild.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Archirodon", logo: "/images/clients/partners/archirodon.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+  ],
+  // Row 3 (moves left)
+  [
+    { name: "NCMS", logo: "/images/clients/partners/ncms.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "JGC", logo: "/images/clients/partners/jgc.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "McDermott", logo: "/images/clients/partners/mcdermott.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "alfanar Projects", logo: "/images/clients/partners/alfanar.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "NBC", logo: "/images/clients/partners/nbc.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "SAPAC", logo: "/images/clients/partners/sapac.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "POWERCHINA", logo: "/images/clients/partners/powerchina.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "SINOHYDRO", logo: "/images/clients/partners/sinohydro.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "NBTC", logo: "/images/clients/partners/nbtc.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "AD", logo: "/images/clients/partners/ad.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "RREE", logo: "/images/clients/partners/rree.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "SANAD", logo: "/images/clients/partners/sanad.png", className: "h-12 max-h-12 w-auto max-w-[155px] object-contain" },
+    { name: "Saudi Electricity Company", logo: "/images/clients/sec.png", className: "h-10 max-h-10 w-auto max-w-[150px] object-contain" },
+    { name: "Royal Commission for Jubail & Yanbu", logo: "/images/clients/rcjy.svg", className: "h-11 max-h-11 w-auto max-w-[120px] object-contain" },
+    { name: "NEOM", logo: "/images/clients/neom.svg", className: "h-7 max-h-7 w-auto max-w-[125px] object-contain" },
+  ],
 ];
 
 
@@ -199,9 +215,6 @@ export default function Home() {
                 Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-brand-green">Services</span>
               </h2>
             </div>
-            <p className="text-slate-400 text-sm sm:text-base max-w-md leading-relaxed">
-              Integrated turnkey solutions executed under certified Aramco, Royal Commission, and ISO safety standards.
-            </p>
           </div>
 
           {/* 6 Interactive Service Cards in 3-column layout (2x3 grid) */}
@@ -443,21 +456,39 @@ export default function Home() {
               Holding active vendor registrations and high-standard prequalifications across Saudi Arabia's major sovereign operators.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {sovereignClients.map((client, idx) => (
-              <div
-                key={client.name}
-                style={{ transitionDelay: `${idx * 60}ms` }}
-                className="reveal-card client-card group rounded-2xl px-5 py-4 bg-white cursor-default border border-slate-200/80 shadow-sm hover:shadow-md hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center min-h-[92px]"
-                title={client.name}
-              >
-                <div className="w-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className={client.className}
-                    loading="lazy"
-                  />
+          <div className="space-y-4 overflow-hidden">
+            {clientRows.map((row, rowIdx) => (
+              <div key={rowIdx} className="marquee-row overflow-hidden">
+                <div className={rowIdx === 1 ? 'animate-marquee-right flex gap-4' : 'animate-marquee-left flex gap-4'}>
+                  {[...row, ...row].map((client, idx) => (
+                    <div
+                      key={`${rowIdx}-${client.name}-${idx}`}
+                      className="client-card group rounded-2xl px-6 py-4 bg-white cursor-default border border-slate-200/80 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 flex items-center justify-center min-h-[88px] min-w-[200px] shrink-0"
+                      title={client.name}
+                    >
+                      <div className="w-full flex flex-col items-center justify-center text-center transition-transform duration-300 group-hover:scale-105">
+                        {client.logo ? (
+                          <img
+                            src={client.logo}
+                            alt={client.name}
+                            className={client.className}
+                            loading="lazy"
+                          />
+                        ) : (
+                          <>
+                            <span className={`font-black text-base sm:text-lg tracking-tight leading-none ${client.badgeBg || client.color || 'text-slate-800'}`}>
+                              {client.wordmark}
+                            </span>
+                            {client.sub && (
+                              <span className="text-[9px] font-bold tracking-wider text-slate-500 mt-1 uppercase">
+                                {client.sub}
+                              </span>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}

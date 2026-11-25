@@ -181,9 +181,6 @@ export default function Equipment() {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-slate-900 leading-[1.15]">
                   Heavy <span className="grad-text">Equipment Fleet</span>
                 </h1>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-                  1,500+ modern heavy machinery assets maintained strictly to OEM standards, 100% third-party TUV inspected, and operated by Saudi Aramco pre-qualified certified operators across the Kingdom.
-                </p>
               </div>
 
               {/* Key Highlights Checklist Pills */}
