@@ -173,7 +173,18 @@ const serviceDivisions = [
       'Earthmoving & Civil Rigs',
       'Power Generation & Chillers',
       'Forklifts & Laydown Logistics',
-      'High-Pressure Pumps & Compressors',
+            'High-Pressure Pumps & Compressors',
+    ],
+  },
+  {
+    id: 'fmcs',
+    label: 'Facility Management & Catering (FMCS)',
+    icon: 'restaurant',
+    items: [
+      'Hard & Soft Facility Management (HVAC & MEP)',
+      'HACCP Industrial & Camp Catering',
+      'Workforce Camp Operations & Housekeeping',
+      'Pest Control, Sanitization & Life Support',
     ],
   },
 ];
@@ -298,7 +309,7 @@ export default function Contact() {
     company: '',
     email: '',
     phone: '',
-    location: isAutoFilledFromMap ? (queryCity || matchedInitialOffice.name) : '',
+    location: queryCity || matchedInitialOffice.name,
     targetDate: '',
     scopeDetails: buildInitialScope(),
     agree: false,

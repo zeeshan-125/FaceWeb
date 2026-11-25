@@ -12,6 +12,7 @@ const leftLinks = [
 const rightLinks = [
   { to: '/equipment', label: 'Equipment Rentals' },
   { to: '/tcf', label: 'TCF' },
+  { to: '/fmcs', label: 'FMCS' },
   { to: '/about', label: 'About' },
 ];
 

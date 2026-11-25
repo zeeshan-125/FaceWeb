@@ -102,13 +102,15 @@ const brands = [
 ];
 
 const categoryFilters = [
-  { id: 'all', label: 'All Fleet', count: '1,500+', icon: 'dashboard', desc: 'Complete Fleet' },
-  { id: 'cranes', label: 'Cranes', count: '180+', icon: 'precision_manufacturing', desc: '50T–500T Mobile' },
-  { id: 'transport', label: 'Heavy Transport', count: '350+', icon: 'local_shipping', desc: 'Lowbed & SPMT' },
-  { id: 'earthmoving', label: 'Earthmoving', count: '600+', icon: 'construction', desc: 'CAT & Komatsu' },
-  { id: 'power', label: 'Power & Cooling', count: '750+', icon: 'bolt', desc: 'GenSets & Chillers' },
-  { id: 'forklifts', label: 'Forklifts', count: '420+', icon: 'forklift', desc: 'Yard & Laydown' },
-  { id: 'pumps', label: 'Pumps & Air', count: '200+', icon: 'compress', desc: '40K PSI Hydro' },
+  { id: 'all', label: 'All Fleet', count: '324', icon: 'dashboard', desc: 'Complete Fleet' },
+  { id: 'vacuum', label: 'Vacuum & Jetting Units', count: '113', icon: 'compress', desc: 'Super Suckers & Hydro' },
+  { id: 'tankers', label: 'Water & Fuel Tankers', count: '37', icon: 'water_drop', desc: 'Liquid Logistics' },
+  { id: 'dump', label: 'Dump Trucks', count: '50', icon: 'local_shipping', desc: 'Heavy Tippers' },
+  { id: 'waste', label: 'Waste & Skip Handling', count: '71', icon: 'recycling', desc: 'Skip & Compactors' },
+  { id: 'haulage', label: 'Heavy Haulage', count: '16', icon: 'rv_hookup', desc: 'Lowbed & SPMT' },
+  { id: 'cranes', label: 'Cranes & Lifting', count: '9', icon: 'precision_manufacturing', desc: 'Mobile & Crawler' },
+  { id: 'earthmoving', label: 'Earthmoving', count: '22', icon: 'construction', desc: 'CAT & Komatsu' },
+  { id: 'light', label: 'Light Trucks & Buses', count: '6', icon: 'airport_shuttle', desc: 'Crew & Utility' },
 ];
 
 export default function Equipment() {
@@ -539,23 +541,6 @@ export default function Equipment() {
       </section>
 
       {/* ── 5. OEM BRANDS SHOWCASE ── */}
-      <section className="py-14 bg-slate-950 border-t border-slate-800 reveal">
-        <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
-          <p className="text-center text-[11px] font-mono uppercase tracking-widest text-slate-400 mb-8">
-            Factory-Certified Heavy Equipment Manufacturers in Fleet
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {brands.map((b, i) => (
-              <span
-                key={i}
-                className="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-black text-slate-300 shadow-sm hover:border-brand-blue hover:text-white transition-all cursor-default"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

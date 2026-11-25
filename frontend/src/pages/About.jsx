@@ -105,7 +105,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-black uppercase text-slate-900 tracking-tight">Our Mission</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                To deliver mission-critical industrial services, turnkey workforce living communities, and heavy equipment fleets that protect and accelerate Saudi Arabia's sovereign energy infrastructure with zero harm to people or the environment.
+                To deliver safe, reliable, and high-quality industrial services through skilled people, modern equipment, operational excellence, and responsible practices—helping our clients achieve their goals efficiently and sustainably.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-black uppercase text-slate-900 tracking-tight">Our Vision</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                To stand as the Kingdom's benchmark industrial contractor and workforce welfare partner for Saudi Vision 2030 — recognized for unyielding safety leadership, technological adoption, and sovereign supply-chain resilience.
+                To be a trusted leader in industrial solutions, delivering sustainable solutions that create lasting value for our clients, people, and communities.
               </p>
             </div>
 
@@ -124,14 +124,9 @@ export default function About() {
                 <span className="material-symbols-outlined text-[28px]">stars</span>
               </div>
               <h3 className="text-2xl font-black uppercase text-slate-900 tracking-tight">Core Values</h3>
-              <ul className="space-y-2 text-xs font-semibold text-slate-700">
-                {['Zero Compromise on Personnel Safety', 'Integrity & Transparency in Every Contract', 'Technical Innovation & Rigorous Quality Assurance', 'Punctual Turnaround & Delivery SLA Guarantees', 'Kingdom-Wide Circular Environmental Stewardship'].map((v, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center text-[10px] font-black">✓</span>
-                    <span>{v}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Our services are aligned with Saudi Arabia&apos;s Green Initiative, supporting the Kingdom&apos;s Vision 2030 goals through responsible waste management and sustainable industrial practices.
+              </p>
             </div>
           </div>
         </div>
