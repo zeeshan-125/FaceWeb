@@ -378,8 +378,36 @@ export default function OperationalBaseMap() {
 
   const activeBase = allBases.find((b) => b.id === selectedBaseId) || allBases[1];
 
-  const handleRfqSubmit = (e) => {
+  const handleRfqSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const nameParts = (rfqForm.name || '').trim().split(' ');
+      const firstName = nameParts[0] || 'Valued';
+      const lastName = nameParts.slice(1).join(' ') || 'Client';
+
+      await fetch('https://crm-k8g4.onrender.com/api/v1/public/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email: rfqForm.email,
+          phone: rfqForm.phone || '',
+          company: rfqForm.company || '',
+          message: [
+            rfqForm.service ? `Service: ${rfqForm.service}` : '',
+            rfqForm.scope ? `Scope Details: ${rfqForm.scope}` : '',
+            activeBase?.name ? `Target Operational Base: ${activeBase.name}` : ''
+          ].filter(Boolean).join('\n'),
+          source: 'FaceWeb Map RFQ',
+          sourceChannel: 'Website Map'
+        })
+      });
+    } catch (err) {
+      console.error('Failed to submit map RFQ to CRM:', err);
+    }
+
     setRfqSubmitted(true);
   };
 
