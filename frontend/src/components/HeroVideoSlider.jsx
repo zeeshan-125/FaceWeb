@@ -16,12 +16,7 @@ const slides = [
     actionText: 'WMS Services',
     action2Link: '#rfq-map',
     action2Text: 'Request a Quote',
-    stats: [
-      { value: '728,000', label: 'M³ Hazardous Waste Disposed', color: 'text-white' },
-      { value: '1,000', label: 'M³ Non-Hazardous Disposed', color: 'text-brand-green' },
-      { value: '1,000', label: 'M³ Aramco Waste Collected', color: 'text-white' },
-      { value: '1,000', label: 'M³ Non-Aramco Collected', color: 'text-brand-green' },
-    ],
+    hideStats: true,
   },
   {
     id: 2,

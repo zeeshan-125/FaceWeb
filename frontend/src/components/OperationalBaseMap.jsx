@@ -856,11 +856,22 @@ export default function OperationalBaseMap() {
 
                         {/* Submit Action */}
                         <div className="pt-1">
+                          <div>
+                            <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+                              Document Upload <span className="text-slate-400 font-normal">(Optional)</span>
+                            </label>
+                            <input
+                              type="file"
+                              accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg"
+                              className="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50/70 text-slate-600 text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-[11px] file:font-bold file:bg-brand-blue/10 file:text-brand-blue hover:file:bg-brand-blue/20 transition-all cursor-pointer"
+                            />
+                          </div>
+
                           <button
                             type="submit"
                             className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/25 hover:shadow-brand-blue/40 transition-all flex items-center justify-center gap-2 uppercase tracking-wider group"
                           >
-                            <span>Transmit RFQ to {activeBase.shortName}</span>
+                            <span>Submit</span>
                             <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
                               send
                             </span>

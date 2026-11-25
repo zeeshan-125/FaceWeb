@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -51,7 +51,7 @@ const wasteStreams = [
     id: 'industrial-waste',
     title: 'Industrial Waste Management',
     subtitle: 'Petrochemical Sludge Dewatering, Tank Bottoms & Process Residues',
-    image: '/images/wms/wms_hazmat.jpg',
+    image: '/images/wms/industrial-waste.jpg',
     tag: 'Heavy Industrial',
     desc: 'Engineered waste management for refineries, petrochemical plants, and heavy manufacturing facilities. Delivering mobile sludge centrifuging, hydrocarbon reclamation, effluent neutralization, and compliant disposal of spent catalysts and process residues.',
     specs: [
@@ -72,7 +72,7 @@ const wasteStreams = [
     id: 'commercial-waste',
     title: 'Commercial Waste Management',
     subtitle: 'Tailored Waste Logistics for Commercial, Corporate & Retail Facilities',
-    image: '/images/wms/wms_centrifuge.jpg',
+    image: '/images/wms/commercial-waste.jpg',
     tag: 'Commercial & Facility',
     desc: 'Structured waste management services designed for commercial complexes, corporate headquarters, logistics centers, and retail parks. Ensuring clean, hygienic, and eco-friendly waste handling with reliable collection schedules and ESG compliance.',
     specs: [
@@ -134,40 +134,40 @@ const wmsEquipment = [
   {
     title: '316L Stainless High-Vacuum Tankers',
     category: 'Hazardous Liquids',
-    capacity: '24,000L – 32,000L',
-    specs: 'ATEX Zone 1 • Liquid Ring Pump • ADR UN-Certified',
+    capacity: '24,000L â€“ 32,000L',
+    specs: 'ATEX Zone 1 â€¢ Liquid Ring Pump â€¢ ADR UN-Certified',
     desc: 'Engineered for corrosive petrochemical liquids, spent acids, and volatile sludges with vapor recovery scrubbers.',
     icon: 'oil_barrel',
   },
   {
     title: 'Mobile Decanter Centrifuge Skids',
     category: 'Sludge Recovery',
-    capacity: '45 m³/h Throughput',
-    specs: '3,200 RPM High-G • 3-Phase Separation • Automated PLC',
+    capacity: '45 mÂ³/h Throughput',
+    specs: '3,200 RPM High-G â€¢ 3-Phase Separation â€¢ Automated PLC',
     desc: 'Containerized mobile units extracting clean crude oil from oil-pit sediments and API separator bottoms on site.',
     icon: 'sync',
   },
   {
     title: 'Super Sucker Air Mover Vacuums',
     category: 'Heavy Industrial',
-    capacity: '6,000 m³/h Airflow',
-    specs: 'Wet & Dry Catalyst Removal • 28" Hg Deep Vacuum',
+    capacity: '6,000 mÂ³/h Airflow',
+    specs: 'Wet & Dry Catalyst Removal â€¢ 28" Hg Deep Vacuum',
     desc: 'Heavy-duty suction capable of pulling dense sludge, heavy sand, and chemical catalysts over distances exceeding 150 meters.',
     icon: 'air',
   },
   {
     title: 'Sealed Hazardous Roll-Off Skips',
     category: 'Solid HazMat',
-    capacity: '10m³, 20m³ & 30m³',
-    specs: 'Liquid-Tight Gaskets • Double-Lock Lids • Epoxy-Coated',
+    capacity: '10mÂ³, 20mÂ³ & 30mÂ³',
+    specs: 'Liquid-Tight Gaskets â€¢ Double-Lock Lids â€¢ Epoxy-Coated',
     desc: 'Certified bins designed for contaminated soils, used PPE, hazardous filter cakes, and spent catalyst packaging.',
     icon: 'delete_forever',
   },
   {
     title: 'Mobile pH Neutralization Skids',
     category: 'Effluent Treatment',
-    capacity: 'Continuous 30 m³/h',
-    specs: 'Dual Reagent Dosing • Inline pH Probes • Scrubber Attached',
+    capacity: 'Continuous 30 mÂ³/h',
+    specs: 'Dual Reagent Dosing â€¢ Inline pH Probes â€¢ Scrubber Attached',
     desc: 'Rapid on-site chemical stabilization converting strong acidic or caustic process streams into inert neutral effluent.',
     icon: 'science',
   },
@@ -175,15 +175,15 @@ const wmsEquipment = [
     title: '24/7 HAZMAT Rapid Response Trailers',
     category: 'Emergency Response',
     capacity: 'Turnkey Spill Kit Fleet',
-    specs: 'Oil Booms • Skimmers • Neutralizing Agents • Level A/B PPE',
+    specs: 'Oil Booms â€¢ Skimmers â€¢ Neutralizing Agents â€¢ Level A/B PPE',
     desc: 'Pre-mobilized trailers ready to dispatch within 2 hours to contain industrial pipeline leaks or chemical spills.',
     icon: 'emergency',
   },
 ];
 
 const regulatoryBadges = [
-  { name: 'MWAN / موان', desc: 'National Center for Waste Management Licensed Carrier', code: 'Permit #MWAN-2024-KSA' },
-  { name: 'NCEC / التزام', desc: 'Environmental Compliance & Hazardous Transporter', code: 'Lic. #NCEC-HAZ-089' },
+  { name: 'MWAN / Ù…ÙˆØ§Ù†', desc: 'National Center for Waste Management Licensed Carrier', code: 'Permit #MWAN-2024-KSA' },
+  { name: 'NCEC / Ø§Ù„ØªØ²Ø§Ù…', desc: 'Environmental Compliance & Hazardous Transporter', code: 'Lic. #NCEC-HAZ-089' },
   { name: 'Saudi Aramco', desc: 'Pre-Qualified Hazardous Waste Contractor', code: 'Vendor #10084291' },
   { name: 'Royal Commission', desc: 'Jubail & Yanbu RCER 2020 Environmental Approval', code: 'RC-JUB-ENV-CERT' },
   { name: 'ADR Compliance', desc: 'UN Certified Dangerous Goods Road Transportation', code: 'ADR Class 3, 6, 8, 9' },
@@ -206,7 +206,7 @@ export default function WMS() {
 
   return (
     <div className="bg-white text-brand-slate selection:bg-brand-blue selection:text-white">
-      {/* ── 1. CINEMATIC VIDEO HERO BANNER (Clean Light Theme) ── */}
+      {/* â”€â”€ 1. CINEMATIC VIDEO HERO BANNER (Clean Light Theme) â”€â”€ */}
       <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 overflow-hidden bg-slate-50 border-b border-slate-200">
         {/* Looping Live Video Background with Poster Fallback */}
         <video
@@ -268,7 +268,7 @@ export default function WMS() {
             <div className="lg:col-span-5 grid grid-cols-2 gap-3.5">
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm hover:shadow-md hover:border-brand-blue/40 transition-all text-center flex flex-col justify-center">
                 <div className="text-xl sm:text-2xl lg:text-[26px] font-black text-brand-blue tracking-tight">
-                  <AnimatedCounter value="728,000 m³" duration={1400} delay={150} triggerOnView={true} />
+                  <AnimatedCounter value="728,000 mÂ³" duration={1400} delay={150} triggerOnView={true} />
                 </div>
                 <div className="text-xs sm:text-[13px] text-slate-800 font-bold mt-1.5 leading-snug">
                   Hazardous Waste Disposed
@@ -277,7 +277,7 @@ export default function WMS() {
 
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm hover:shadow-md hover:border-brand-blue/40 transition-all text-center flex flex-col justify-center">
                 <div className="text-xl sm:text-2xl lg:text-[26px] font-black text-brand-blue tracking-tight">
-                  <AnimatedCounter value="1,000 m³" duration={1400} delay={300} triggerOnView={true} />
+                  <AnimatedCounter value="4,000,000+ mÂ³" duration={1400} delay={300} triggerOnView={true} />
                 </div>
                 <div className="text-xs sm:text-[13px] text-slate-800 font-bold mt-1.5 leading-snug">
                   Non Hazardous Waste Disposed
@@ -286,7 +286,7 @@ export default function WMS() {
 
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm hover:shadow-md hover:border-brand-blue/40 transition-all text-center flex flex-col justify-center">
                 <div className="text-xl sm:text-2xl lg:text-[26px] font-black text-brand-blue tracking-tight">
-                  <AnimatedCounter value="1,000 m³" duration={1400} delay={450} triggerOnView={true} />
+                  <AnimatedCounter value="3,000,000+ mÂ³" duration={1400} delay={450} triggerOnView={true} />
                 </div>
                 <div className="text-xs sm:text-[13px] text-slate-800 font-bold mt-1.5 leading-snug">
                   Aramco Waste Collected
@@ -295,7 +295,7 @@ export default function WMS() {
 
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm hover:shadow-md hover:border-brand-blue/40 transition-all text-center flex flex-col justify-center">
                 <div className="text-xl sm:text-2xl lg:text-[26px] font-black text-brand-blue tracking-tight">
-                  <AnimatedCounter value="1,000 m³" duration={1400} delay={600} triggerOnView={true} />
+                  <AnimatedCounter value="2,000,000+ mÂ³" duration={1400} delay={600} triggerOnView={true} />
                 </div>
                 <div className="text-xs sm:text-[13px] text-slate-800 font-bold mt-1.5 leading-snug">
                   Non-Aramco Waste Collected
@@ -307,7 +307,7 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 2. REGULATORY & ACCREDITATION GOVERNANCE STRIP (Light Theme) ── */}
+      {/* â”€â”€ 2. REGULATORY & ACCREDITATION GOVERNANCE STRIP (Light Theme) â”€â”€ */}
       <section className="py-6 bg-white border-b border-slate-200/90 text-slate-800">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -329,12 +329,12 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 3. INTERACTIVE 4-PILLAR WMS CORE DIVISIONS ── */}
+      {/* â”€â”€ 3. INTERACTIVE 4-PILLAR WMS CORE DIVISIONS â”€â”€ */}
       <section className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-12">
           
           {/* Section Header */}
-          <div className="reveal-up text-center max-w-3xl mx-auto space-y-3">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-green text-xs font-bold uppercase tracking-wider">
               <span className="material-symbols-outlined text-[16px] text-brand-green">recycling</span>
               Integrated Capabilities
@@ -348,7 +348,7 @@ export default function WMS() {
           </div>
 
           {/* Interactive Stream Tabs */}
-          <div className="reveal-up flex flex-wrap items-center justify-center gap-2 sm:gap-3" style={{ transitionDelay: '100ms' }}>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             {wasteStreams.map((stream, idx) => (
               <button
                 key={stream.id}
@@ -366,7 +366,7 @@ export default function WMS() {
           </div>
 
           {/* Active Tab Showcase Card */}
-          <div className="reveal-scale bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden p-6 sm:p-8 lg:p-10 transition-all">
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden p-6 sm:p-8 lg:p-10 transition-all">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
               {/* Media Visual Column (6 Cols) */}
@@ -389,7 +389,7 @@ export default function WMS() {
                   {/* Bottom Image Caption */}
                   <div className="absolute bottom-4 left-4 right-4 z-10">
                     <div className="text-xs font-bold text-white/90 drop-shadow">
-                      FACE Industrial Services • KSA Petrochemical Operational Fleet
+                      FACE Industrial Services â€¢ KSA Petrochemical Operational Fleet
                     </div>
                   </div>
                 </div>
@@ -443,7 +443,7 @@ export default function WMS() {
                 <ul className="space-y-2">
                   {wasteStreams[activeTab].features.map((feat, fIdx) => (
                     <li key={fIdx} className="text-xs sm:text-[13px] font-semibold text-slate-700 flex items-start gap-2.5">
-                      <span className="text-emerald-500 font-black text-sm flex-shrink-0 mt-0.5">✓</span>
+                      <span className="text-emerald-500 font-black text-sm flex-shrink-0 mt-0.5">âœ“</span>
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -467,7 +467,7 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 4. DIGITAL CHAIN-OF-CUSTODY LIFECYCLE (Light Theme) ── */}
+      {/* â”€â”€ 4. DIGITAL CHAIN-OF-CUSTODY LIFECYCLE (Light Theme) â”€â”€ */}
       <section className="py-20 lg:py-28 bg-slate-50/70 border-y border-slate-200 relative overflow-hidden">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10 space-y-14">
           
@@ -512,7 +512,7 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 5. SPECIALIZED WMS FLEET & HEAVY ASSETS ── */}
+      {/* â”€â”€ 5. SPECIALIZED WMS FLEET & HEAVY ASSETS â”€â”€ */}
       <section className="py-20 lg:py-28 bg-white relative">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-12">
           
@@ -564,7 +564,7 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 6. CIRCULAR ECONOMY & SAUDI VISION 2030 ALIGNMENT ── */}
+      {/* â”€â”€ 6. CIRCULAR ECONOMY & SAUDI VISION 2030 ALIGNMENT â”€â”€ */}
       <section className="py-20 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -578,7 +578,7 @@ export default function WMS() {
                 Pioneering <span className="text-brand-green">Zero-Landfill</span> Industrial Standards
               </h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                In alignment with Saudi Vision 2030 and the Kingdom’s net-zero transition, FACE transforms industrial waste from an operational liability into high-value secondary resources. By integrating high-G mechanical centrifuges with thermal desorption partnerships, we divert over 85% of turnaround waste away from sovereign landfills.
+                In alignment with Saudi Vision 2030 and the Kingdomâ€™s net-zero transition, FACE transforms industrial waste from an operational liability into high-value secondary resources. By integrating high-G mechanical centrifuges with thermal desorption partnerships, we divert over 85% of turnaround waste away from sovereign landfills.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-2">
@@ -616,7 +616,7 @@ export default function WMS() {
         </div>
       </section>
 
-      {/* ── 7. FINAL 24/7 RAPID HAZMAT MOBILIZATION & RFP BANNER ── */}
+      {/* â”€â”€ 7. FINAL 24/7 RAPID HAZMAT MOBILIZATION & RFP BANNER â”€â”€ */}
       <section className="py-20 lg:py-28 cta-section relative overflow-hidden text-white">
         <div className="absolute inset-0 grid-lines opacity-30 pointer-events-none" />
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10">

@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="w-3 h-0.5 bg-brand-blue3 inline-block rounded"></span>Pages
             </h4>
             <ul className="space-y-2">
-              {[['/', 'Home'], ['/services', 'Industrial Services'], ['/equipment', 'Equipment Rentals'], ['/wms', 'WMS (Waste Management)'], ['/tcf', 'TCF (Modular Facilities)'], ['/about', 'About Us'], ['/hse', 'HSE & Safety'], ['/contact', 'Contact']].map(([to, label]) => (
+              {[['/', 'Home'], ['/services', 'Industrial Services'], ['/equipment', 'Equipment Rentals'], ['/wms', 'WMS (Waste Management)'], ['/tcf', 'TCF (Modular Facilities)'], ['/about', 'About Us'], ['/contact', 'Contact']].map(([to, label]) => (
                 <li key={to}><Link to={to} className="text-sm text-white/45 hover:text-white transition-colors font-medium">{label}</Link></li>
               ))}
             </ul>
@@ -37,9 +37,10 @@ export default function Footer() {
             <h4 className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-4 flex items-center gap-2">
               <span className="w-3 h-0.5 bg-brand-green3 inline-block rounded"></span>Contact
             </h4>
-            <p className="text-sm text-white/45 mb-1">contact@facecontractor.com</p>
-            <p className="text-sm text-white/45 mb-1">800-FACE-KSA</p>
-            <p className="text-sm text-white/45">Jubail Industrial City, KSA</p>
+            <p className="text-sm text-white/45 mb-1">00966 13 830 9720 | 00966 59 818 3134</p>
+            <p className="text-sm text-white/45 mb-1">www.faceindus.com</p>
+            <p className="text-sm text-white/45 mb-1">info@faceindus.com</p>
+            <p className="text-sm text-white/45">Eastern Province, KSA</p>
           </div>
         </div>
 

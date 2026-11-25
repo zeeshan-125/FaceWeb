@@ -108,10 +108,6 @@ export default function FMCS() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left Column */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-blue text-[11px] font-bold uppercase tracking-wider">
-                <span className="material-symbols-outlined text-[15px] text-brand-blue">apartment</span>
-                Facility Management &amp; Catering Services
-              </div>
 
               <div className="space-y-3">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-slate-900 leading-[1.15]">

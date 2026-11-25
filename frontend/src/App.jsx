@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Equipment from './pages/Equipment';
-import HSE from './pages/HSE';
 import FMCS from './pages/FMCS';
 import Contact from './pages/Contact';
 import WMS from './pages/WMS';
@@ -42,7 +41,6 @@ function AnimatedPageRoutes() {
         <Route path="/wms" element={<WMS />} />
         <Route path="/tcf" element={<TCF />} />
         <Route path="/portable-structure" element={<TCF />} />
-        <Route path="/hse" element={<HSE />} />
         <Route path="/fmcs" element={<FMCS />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -1,97 +1,97 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 import Breadcrumb from '../components/Breadcrumb';
 
 const categories = [
   {
+    id: 'vacuum',
+    title: 'Vacuum & Jetting Units',
+    count: '113 Units',
+    icon: 'compress',
+    badge: 'Vacuum & Jetting',
+    image: '/images/equipment/vacuum-jetting.jpg',
+    desc: 'High-capacity vacuum tankers, super suckers, and ultra-high-pressure hydro-jetting units for industrial plant cleaning and sludge extraction.',
+    specs: [
+      { name: 'Super Sucker Vacuum Units', value: '12,000L – 25,000L', tag: 'Aramco Spec' },
+      { name: 'UHP Hydro-Jetting Pumps', value: 'Up to 40,000 PSI', tag: 'WOMA / NLB' },
+      { name: 'Vacuum HazMat Tankers', value: '5,000L – 30,000L', tag: 'ADR Certified' },
+      { name: 'Combo Jet-Vac Trucks', value: 'High-Flow Suction', tag: '24/7 Dispatch' },
+    ],
+  },
+  {
+    id: 'tankers',
+    title: 'Water & Fuel Tankers',
+    count: '37 Units',
+    icon: 'water_drop',
+    badge: 'Liquid Logistics',
+    image: '/images/equipment/water-fuel-tanker.jpg',
+    desc: 'Dedicated potable water, industrial process water, and diesel fuel tankers supporting remote camps, rig sites, and plant turnarounds.',
+    specs: [
+      { name: 'Potable Water Tankers', value: '10,000L – 32,000L', tag: 'Food Grade SS' },
+      { name: 'Diesel Fuel Tankers', value: '15,000L – 36,000L', tag: 'Metered Pump' },
+      { name: 'Industrial Water Trucks', value: 'Dust & Compaction', tag: 'Spray Bar' },
+      { name: 'Chemical Transfer Tankers', value: '316L SS Corrosion Spec', tag: 'NCEC Approved' },
+    ],
+  },
+  {
+    id: 'dump',
+    title: 'Dump Trucks',
+    count: '50 Units',
+    icon: 'local_shipping',
+    badge: 'Heavy Tippers',
+    image: '/images/equipment/dump-trucks.jpg',
+    desc: 'Heavy-duty articulated and rigid dump trucks for bulk earthmoving, aggregate haulage, and civil infrastructure corridors.',
+    specs: [
+      { name: 'Articulated Dump Trucks', value: '30T – 60T All-Terrain', tag: 'Volvo A40G' },
+      { name: '6x4 & 8x4 Tipper Trucks', value: '20m³ – 32m³ Box', tag: 'MAN / Mercedes' },
+      { name: 'Rock & Quarry Dumpers', value: 'Hardox Reinforced', tag: 'Severe Duty' },
+      { name: 'Side-Tipper Trailers', value: 'Bulk Aggregate Haul', tag: 'GPS Tracked' },
+    ],
+  },
+  {
+    id: 'waste',
+    title: 'Waste & Skip Handling',
+    count: '71 Units',
+    icon: 'recycling',
+    badge: 'WMS Fleet',
+    image: '/images/equipment/waste-skip.jpg',
+    desc: 'Skip loaders, hook-lift roll-off trucks, and waste compactors engineered for NCEC-compliant industrial and commercial waste logistics.',
+    specs: [
+      { name: 'Skip Loader Trucks', value: '5m³ – 14m³ Skips', tag: 'Chain Lift' },
+      { name: 'Hook-Lift Roll-Offs', value: '20m³ – 40m³ Containers', tag: 'Heavy Duty' },
+      { name: 'Rear-Loader Compactors', value: '16m³ – 24m³ Capacity', tag: 'Sealed Body' },
+      { name: 'HazMat Drum Carriers', value: 'Spill-Contained', tag: 'MWAN Compliant' },
+    ],
+  },
+  {
     id: 'cranes',
-    title: 'Cranes & Heavy Lift Fleet',
-    count: '180+ Units',
-    icon: 'construction',
+    title: 'Cranes & Lifting',
+    count: '9 Units',
+    icon: 'precision_manufacturing',
     badge: 'Heavy Lift Division',
-    image: '/images/crane-1.jpg',
-    desc: 'All-terrain, rough-terrain, crawler, and heavy lattice-boom cranes from Liebherr, Tadano, Grove, and Manitowoc with digital load management.',
+    image: '/images/equipment/cranes-lifting.jpg',
+    desc: 'All-terrain, rough-terrain, and crawler cranes from Liebherr, Tadano, and Grove with TUV-certified operators and digital load management.',
     specs: [
       { name: 'All-Terrain Mobile Cranes', value: '50T – 500T Capacity', tag: 'Liebherr / Tadano' },
       { name: 'Heavy Crawler Cranes', value: '100T – 500T Lattice', tag: 'Demag / Manitowoc' },
       { name: 'Rough-Terrain Cranes', value: '20T – 120T 4x4', tag: 'Grove / Kato' },
-      { name: 'Telescopic Heavy Handlers', value: '6T – 20T Reach', tag: 'Merlo / Manitou' },
-    ],
-  },
-  {
-    id: 'transport',
-    title: 'Heavy Transport & Modular SPMT',
-    count: '350+ Units',
-    icon: 'airport_shuttle',
-    badge: 'Logistics & Haulage',
-    image: '/images/operations_tasnee_opt.jpg',
-    desc: 'Complete heavy transport solutions for petrochemical modules, precast elements, oversized refinery vessels, and severe desert hauls.',
-    specs: [
-      { name: 'Heavy Hydraulic Lowbeds', value: '50T – 150T Payload', tag: 'SCHEUERLE' },
-      { name: 'Hydraulic Multi-Axle SPMT', value: 'Modular / Coupled', tag: 'Goldhofer' },
-      { name: 'Heavy Stepframe Trailers', value: '30T – 80T Extended', tag: 'Faymonville' },
-      { name: 'Vacuum HazMat Tankers', value: '5,000L – 30,000L', tag: 'ADR Certified' },
+      { name: 'Telescopic Boom Handlers', value: '6T – 20T Reach', tag: 'Merlo / Manitou' },
     ],
   },
   {
     id: 'earthmoving',
-    title: 'Earthmoving & Civil Rigs',
-    count: '600+ Units',
-    icon: 'agriculture',
+    title: 'Earthmoving',
+    count: '22 Units',
+    icon: 'construction',
     badge: 'Infrastructure Division',
-    image: '/images/hero-site.jpg',
+    image: '/images/equipment/earthmoving.jpg',
     desc: 'Caterpillar, Komatsu, and Volvo earthmoving fleet for gigaproject mass grading, petrochemical foundations, and trenching corridors.',
     specs: [
       { name: 'Heavy Hydraulic Excavators', value: '20T – 80T Mass Excavation', tag: 'CAT 349 / Komatsu' },
       { name: 'Heavy Tracked Bulldozers', value: 'CAT D8R – D11T', tag: 'High-Sprocket Rippers' },
       { name: 'Heavy Motor Graders', value: '140M – 24M Blades', tag: 'GPS Guided Laser' },
-      { name: 'Articulated Dump Trucks', value: '30T – 60T All-Terrain', tag: 'Volvo A40G' },
-    ],
-  },
-  {
-    id: 'power',
-    title: 'Power Generation & Chillers',
-    count: '750+ Units',
-    icon: 'electric_bolt',
-    badge: 'Utility Systems',
-    image: '/images/industrial-1.jpg',
-    desc: 'Prime-power synchronized generator farms, trailer-mounted industrial chillers, and temporary medium-voltage substations.',
-    specs: [
-      { name: 'Prime Generator Sets', value: '30 kVA – 2,000 kVA', tag: 'Cummins / CAT' },
-      { name: 'Industrial Mobile Chillers', value: '500 TR – 5,000 TR', tag: 'Aggreko / Trane' },
-      { name: 'Mobile Step-Up Transformers', value: '400V to 13.8kV / 34.5kV', tag: 'Containerized' },
-      { name: 'High-Mast LED Light Towers', value: '9M Mast / Solar Hybrid', tag: 'Generac' },
-    ],
-  },
-  {
-    id: 'forklifts',
-    title: 'Forklifts & Laydown Logistics',
-    count: '420+ Units',
-    icon: 'forklift',
-    badge: 'Yard Material Handling',
-    image: '/images/operations_jampilen_opt.jpg',
-    desc: 'Heavy industrial material handling units for petrochemical storage yards, maritime ports, and industrial laydown staging.',
-    specs: [
-      { name: 'Heavy Diesel Forklifts', value: '3T – 25T Capacity', tag: 'Toyota / Hyster' },
-      { name: 'Rough-Terrain 4WD Forklifts', value: '5T – 16T Desert Spec', tag: 'Manitou' },
-      { name: 'Port Reach Stackers', value: '45T Container Stacking', tag: 'Konecranes / Kalmar' },
-      { name: 'Heavy Duty Telehandlers', value: '3T–5T @ 17M Height', tag: 'JCB / Bobcat' },
-    ],
-  },
-  {
-    id: 'pumps',
-    title: 'High-Pressure Pumps & Compressors',
-    count: '200+ Units',
-    icon: 'compress',
-    badge: 'Mechanical Support',
-    image: '/images/refinery_maintenance.jpg',
-    desc: 'Industrial-grade pumping, nitrogen purging, hydro-testing, and pneumatic power for process plants and offshore terminals.',
-    specs: [
-      { name: 'Hydro-Jetting Pump Units', value: 'Up to 40,000 PSI', tag: 'WOMA / NLB German' },
-      { name: 'Centrifugal High-Flow Pumps', value: 'Up to 5,000 GPM', tag: 'Godwin / Cornell' },
-      { name: 'Industrial Air Compressors', value: '375 – 1,600 CFM', tag: 'Atlas Copco / Sullair' },
-      { name: 'Chemical Transfer Skid Pumps', value: '316L SS Corrosion Spec', tag: 'Wilden' },
+      { name: 'Wheel Loaders & Backhoes', value: '3m³ – 6m³ Bucket', tag: 'CAT 966 / JCB' },
     ],
   },
 ];
@@ -145,8 +145,8 @@ export default function Equipment() {
 
   return (
     <div className="bg-white text-slate-900 selection:bg-brand-blue selection:text-white">
-      {/* ── 1. CLEAN 2-COLUMN SPLIT FLEET HERO WITH AMBIENT BACKGROUND VIDEO ── */}
-      <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 border-b border-slate-200">        {/* Video clipped by its own wrapper — section has no overflow boundary so scroll events pass through */}
+      {/* â”€â”€ 1. CLEAN 2-COLUMN SPLIT FLEET HERO WITH AMBIENT BACKGROUND VIDEO â”€â”€ */}
+      <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 border-b border-slate-200">        {/* Video clipped by its own wrapper â€” section has no overflow boundary so scroll events pass through */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             autoPlay
@@ -184,23 +184,15 @@ export default function Equipment() {
                   Heavy <span className="grad-text">Equipment Fleet</span>
                 </h1>
               </div>
-
-              {/* Key Highlights Checklist Pills */}
-              <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                {[
-                  'Liebherr & Tadano Certified',
-                  '< 2-Hour SLA Rapid Dispatch',
-                  'Rigorous OEM PM Schedules',
-                  '100% Aramco / TUV Badged',
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200/80 text-slate-700 shadow-sm"
-                  >
-                    <span className="material-symbols-outlined text-[15px] text-brand-green font-bold">check_circle</span>
-                    <span>{item}</span>
-                  </div>
-                ))}
+              {/* Request Service Scope RFP CTA */}
+              <div className="flex flex-wrap items-center gap-3.5 pt-1">
+                <Link
+                  to="/contact?service=Heavy%20%26%20Light%20Equipment%20Rental&page=equipment#rfq-form"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider text-white bg-gradient-to-r from-brand-blue to-blue-700 hover:from-blue-700 hover:to-brand-blue shadow-lg shadow-blue-900/20 hover:-translate-y-0.5 transition-all"
+                >
+                  <span className="material-symbols-outlined text-[18px]">assignment</span>
+                  <span>Request Service Scope RFP</span>
+                </Link>
               </div>
 
               {/* 4 Telemetry Metrics Grid (Integrated Dock) */}
@@ -224,7 +216,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* ── 2. HIGH-VISIBILITY FLEET FILTER CONTROL CENTER (Clean Light Theme) ── */}
+      {/* â”€â”€ 2. HIGH-VISIBILITY FLEET FILTER CONTROL CENTER (Clean Light Theme) â”€â”€ */}
       <section className="py-8 bg-slate-50/90 border-b border-slate-200 relative z-20">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-6">
           {/* Header & Search Controls */}
@@ -257,7 +249,7 @@ export default function Equipment() {
                   className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-xs bg-slate-100 rounded-full w-5 h-5 flex items-center justify-center"
                   aria-label="Clear search"
                 >
-                  ✕
+                  âœ•
                 </button>
               )}
             </div>
@@ -329,7 +321,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* ── 3. FLEET SPECIFICATION CARDS GRID ── */}
+      {/* â”€â”€ 3. FLEET SPECIFICATION CARDS GRID â”€â”€ */}
       <section className="py-20 lg:py-28 bg-slate-50 border-b border-slate-200">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
           {filteredCategories.length === 0 ? (
@@ -434,7 +426,7 @@ export default function Equipment() {
       </div>
     </section>
 
-      {/* ── 4. INTERACTIVE MOBILIZATION ESTIMATOR TOOL (Cool Dynamic Widget) ── */}
+      {/* â”€â”€ 4. INTERACTIVE MOBILIZATION ESTIMATOR TOOL (Cool Dynamic Widget) â”€â”€ */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden reveal">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
@@ -453,7 +445,7 @@ export default function Equipment() {
                 <label className="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">1. Select Asset Class</label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                   {[
-                    { id: 'cranes', label: '50T–500T Mobile Cranes' },
+                    { id: 'cranes', label: '50Tâ€“500T Mobile Cranes' },
                     { id: 'transport', label: 'Heavy Lowbeds & SPMT' },
                     { id: 'earthmoving', label: 'Excavators & Bulldozers' },
                     { id: 'power', label: 'Multi-MW Generators' },
@@ -540,7 +532,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* ── 5. OEM BRANDS SHOWCASE ── */}
+      {/* â”€â”€ 5. OEM BRANDS SHOWCASE â”€â”€ */}
     </div>
   );
 }

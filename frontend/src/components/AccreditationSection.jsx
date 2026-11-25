@@ -68,13 +68,6 @@ export default function AccreditationSection() {
             </p>
           </div>
           <div className="lg:col-span-4 flex lg:justify-end">
-            <Link
-              to="/hse"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-brand-blue hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
-            >
-              <span className="material-symbols-outlined text-[18px]">security</span>
-              View HSE Certifications
-            </Link>
           </div>
         </div>
 

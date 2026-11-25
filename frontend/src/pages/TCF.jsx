@@ -10,7 +10,7 @@ const tcfDivisions = [
     title: 'Office Container',
     badge: 'Modular Workspace',
     subtitle: 'Fully Furnished Single & Multi-Story Site Management Complexes',
-    image: '/images/civil-1.jpg',
+    image: '/images/tcf/office-container.jpg',
     tag: 'Executive & Site Offices',
     desc: 'Heavy-gauge steel containerized offices engineered for rapid field deployment in harsh desert and petrochemical environments. Available as single 20ft/40ft units or open-plan modular complexes complete with executive cabins, conference rooms, CAT6 data networking, and high-capacity tropicalized climate control.',
     specs: [
@@ -33,7 +33,7 @@ const tcfDivisions = [
     title: 'Portable Toilets',
     badge: 'Field Sanitation',
     subtitle: 'Heavy-Duty Chemical & Self-Contained Mobile Sanitary Units',
-    image: '/images/camp-1.jpg',
+    image: '/images/tcf/portable-toilets.png',
     tag: 'Hygienic Mobile Sanitation',
     desc: 'Ultra-durable, high-density polyethylene (HDPE) single-cubicle portable restrooms engineered for remote construction sectors, desert camps, and petrochemical plant turnarounds. Features hands-free pneumatic foot-pump flushing, integrated handwash basins, and daily vacuum pump-out servicing.',
     specs: [
@@ -56,7 +56,7 @@ const tcfDivisions = [
     title: 'Kitchen / Dormitories',
     badge: 'Workforce Welfare',
     subtitle: 'HACCP-Grade Commercial Mess Halls & Fire-Rated Accommodation Blocks',
-    image: '/images/operations_jampilen.jpg',
+    image: '/images/tcf/kitchen-dormitories.jpg',
     tag: 'Living Camps & Catering',
     desc: 'Complete workforce camp living solutions built in strict accordance with Saudi Aramco GI 298.010, Royal Commission, and Ministry of Human Resources camp guidelines. Providing sound-insulated multi-occupancy dormitories, centralized dining halls, and industrial stainless-steel catering facilities.',
     specs: [
@@ -79,7 +79,7 @@ const tcfDivisions = [
     title: 'Toilets (Ablution Units)',
     badge: 'Multi-Stall Sanitation',
     subtitle: 'Fixed Multi-Stall Restrooms, Shower Modules & Ablution Complexes',
-    image: '/images/civil-1.jpg',
+    image: '/images/tcf/ablution-units.jpg',
     tag: 'Sanitary Complexes',
     desc: 'Containerized high-volume sanitary and ablution complexes built for large construction camps and industrial contractor yards. Engineered with commercial ceramic water closets, urinal troughs, enclosed hot-water shower stalls, and dedicated Islamic prayer ablution (Wudu) areas with anti-slip flooring.',
     specs: [
@@ -125,7 +125,7 @@ const tcfDivisions = [
     title: 'Modular Units',
     badge: 'Scalable Prefab',
     subtitle: 'Interconnected Flat-Pack & Multi-Story Structural Site Buildings',
-    image: '/images/camp-1.jpg',
+    image: '/images/tcf/modular-units.jpg',
     tag: 'Custom Site Architecture',
     desc: 'Highly flexible modular building systems capable of horizontal linking and vertical stacking up to 3 levels. Designed to accommodate site security gatehouses, field clinics, material testing laboratories, prayer mosques, and vast engineering headquarters with rapid assembly and demountability.',
     specs: [

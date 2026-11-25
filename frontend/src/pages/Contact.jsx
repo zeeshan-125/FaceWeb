@@ -850,11 +850,22 @@ export default function Contact() {
                   </div>
                   {errors.agree && <div className="text-[10px] text-red-500 font-bold">{errors.agree}</div>}
 
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Document Upload <span className="text-slate-400 font-normal">(Optional)</span>
+                    </label>
+                    <input
+                      type="file"
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/70 text-slate-600 text-xs file:mr-3 file:py-1.5 file:px-3.5 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-brand-blue/10 file:text-brand-blue hover:file:bg-brand-blue/20 transition-all cursor-pointer"
+                    />
+                  </div>
+
                   <button
                     type="submit"
                     className="w-full py-4 px-6 rounded-xl font-black text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/30 transition-all flex items-center justify-center gap-2"
                   >
-                    <span>Transmit Commercial RFP</span>
+                    <span>Submit</span>
                     <span className="material-symbols-outlined text-[18px]">send</span>
                   </button>
                 </form>
