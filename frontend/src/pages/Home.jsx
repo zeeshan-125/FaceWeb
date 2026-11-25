@@ -39,7 +39,7 @@ const interactiveServices = [
     category: 'Aramco Approved Fleet',
     desc: 'Heavy and light equipment fleet with 24/7 certified operators — cranes, super suckers, excavators, and dump trucks.',
     features: ['Boom & Crawler Cranes (50T–500T)', 'Super Suckers & Heavy Excavators', 'Loaders, Dump Trucks & Manlifts'],
-    image: '/images/equipment_fleet_hero.jpg',
+    image: '/images/heavy-equipments-fleet.jpg',
     link: '/equipment',
   },
   {
@@ -61,7 +61,7 @@ const interactiveServices = [
     category: 'Power & Site Utilities',
     desc: 'Critical temporary site utilities, multi-megawatt diesel power generation, dewatering pumps, and water logistics.',
     features: ['Multi-Megawatt Power Units', 'Dewatering & Slurry Pumps', 'Industrial Water Tankers & Chillers'],
-    image: '/images/cranes_fleet_hero.jpg',
+    image: '/images/utility-pump.jpg',
     link: '/equipment',
   },
   {
