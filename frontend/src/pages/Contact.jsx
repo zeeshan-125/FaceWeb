@@ -398,23 +398,24 @@ export default function Contact() {
       const firstName = nameParts[0] || 'Valued';
       const lastName = nameParts.slice(1).join(' ') || 'Client';
 
+      const params = new URLSearchParams();
+      params.append('firstName', firstName);
+      params.append('lastName', lastName);
+      params.append('email', form.email);
+      params.append('phone', form.phone || '');
+      params.append('company', form.company || '');
+      params.append('message', [
+        form.scopeDetails ? `Scope: ${form.scopeDetails}` : '',
+        form.location ? `Target Station/Base: ${form.location}` : '',
+        form.targetDate ? `Target Execution Date: ${form.targetDate}` : ''
+      ].filter(Boolean).join('\n'));
+      params.append('source', 'FaceWeb RFP Form');
+      params.append('sourceChannel', 'Website Form');
+
       await fetch('https://crm-k8g4.onrender.com/api/v1/public/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email: form.email,
-          phone: form.phone || '',
-          company: form.company || '',
-          message: [
-            form.scopeDetails ? `Scope: ${form.scopeDetails}` : '',
-            form.location ? `Target Station/Base: ${form.location}` : '',
-            form.targetDate ? `Target Execution Date: ${form.targetDate}` : ''
-          ].filter(Boolean).join('\n'),
-          source: 'FaceWeb RFP Form',
-          sourceChannel: 'Website Form'
-        })
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
       });
     } catch (err) {
       console.error('Failed to submit RFP to CRM:', err);

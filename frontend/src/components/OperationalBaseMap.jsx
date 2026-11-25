@@ -396,23 +396,24 @@ export default function OperationalBaseMap() {
       const firstName = nameParts[0] || 'Valued';
       const lastName = nameParts.slice(1).join(' ') || 'Client';
 
+      const params = new URLSearchParams();
+      params.append('firstName', firstName);
+      params.append('lastName', lastName);
+      params.append('email', rfqForm.email);
+      params.append('phone', rfqForm.phone || '');
+      params.append('company', rfqForm.company || '');
+      params.append('message', [
+        rfqForm.service ? `Service: ${rfqForm.service}` : '',
+        rfqForm.scope ? `Scope Details: ${rfqForm.scope}` : '',
+        activeBase?.name ? `Target Operational Base: ${activeBase.name}` : ''
+      ].filter(Boolean).join('\n'));
+      params.append('source', 'FaceWeb Map RFQ');
+      params.append('sourceChannel', 'Website Map');
+
       await fetch('https://crm-k8g4.onrender.com/api/v1/public/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email: rfqForm.email,
-          phone: rfqForm.phone || '',
-          company: rfqForm.company || '',
-          message: [
-            rfqForm.service ? `Service: ${rfqForm.service}` : '',
-            rfqForm.scope ? `Scope Details: ${rfqForm.scope}` : '',
-            activeBase?.name ? `Target Operational Base: ${activeBase.name}` : ''
-          ].filter(Boolean).join('\n'),
-          source: 'FaceWeb Map RFQ',
-          sourceChannel: 'Website Map'
-        })
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
       });
     } catch (err) {
       console.error('Failed to submit map RFQ to CRM:', err);
