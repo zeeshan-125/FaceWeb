@@ -4,25 +4,6 @@ import AnimatedCounter from './AnimatedCounter';
 
 const slides = [
   {
-    id: 1,
-    video: '/videos/custom/hero_primary.mp4',
-    duration: 8000,
-    badge: 'Saudi Capability. International Standards.',
-    tag: 'Industrial Services',
-    title: 'Delivering Industrial Excellence',
-    titleLine2: 'Across Saudi Arabia',
-    titleLine2Prefix: 'Across ',
-    titleLine2Highlight: 'Saudi Arabia',
-    titleLine2HighlightColor: 'text-brand-green',
-    subtitle: null,
-    desc: 'One accountable Saudi company delivering industrial services, equipment and site solutions for mission-critical projects.',
-    actionLink: '#rfq-map',
-    actionText: 'Request a Quote',
-    action2Link: '/services',
-    action2Text: 'Explore Our Services',
-    hideStats: true,
-  },
-  {
     id: 3,
     video: '/videos/custom/waste_management.mp4',
     badge: 'NCEC Certified · Hazardous & Non-Hazardous Waste',
