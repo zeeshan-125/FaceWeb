@@ -385,13 +385,41 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
+
+    try {
+      const nameParts = (form.name || '').trim().split(' ');
+      const firstName = nameParts[0] || 'Valued';
+      const lastName = nameParts.slice(1).join(' ') || 'Client';
+
+      await fetch('https://crm-k8g4.onrender.com/api/v1/public/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email: form.email,
+          phone: form.phone || '',
+          company: form.company || '',
+          message: [
+            form.scopeDetails ? `Scope: ${form.scopeDetails}` : '',
+            form.location ? `Target Station/Base: ${form.location}` : '',
+            form.targetDate ? `Target Execution Date: ${form.targetDate}` : ''
+          ].filter(Boolean).join('\n'),
+          source: 'FaceWeb RFP Form',
+          sourceChannel: 'Website Form'
+        })
+      });
+    } catch (err) {
+      console.error('Failed to submit RFP to CRM:', err);
+    }
+
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
