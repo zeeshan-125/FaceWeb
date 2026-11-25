@@ -205,11 +205,7 @@ export default function Equipment() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 <div className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-sm hover:border-brand-blue/40 transition-colors">
                   <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Total Fleet</div>
-                  <div className="text-lg sm:text-xl font-black text-brand-slate mt-0.5">1,500+ Units</div>
-                </div>
-                <div className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-sm hover:border-brand-green/40 transition-colors">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Max Capacity</div>
-                  <div className="text-lg sm:text-xl font-black text-brand-green mt-0.5">500T Mobile</div>
+                  <div className="text-lg sm:text-xl font-black text-brand-slate mt-0.5">1,000+ Units</div>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-sm hover:border-brand-blue/40 transition-colors">
                   <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Mobilization SLA</div>
