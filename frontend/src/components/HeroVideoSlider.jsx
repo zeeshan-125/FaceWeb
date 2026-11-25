@@ -115,6 +115,16 @@ export default function HeroVideoSlider() {
 
   const scrollToRfqMap = (e) => {
     e.preventDefault();
+    const serviceMap = {
+      'Waste Management': 'Waste Management Solutions (WMS)',
+      'Industrial Services': 'Industrial Services & High-Pressure Hydrojetting',
+      'TCF': 'Temporary Construction Facilities (TCF)',
+      'Equipment Rentals': 'Heavy & Light Equipment Rental',
+    };
+    const matchedService = serviceMap[activeSlide.tag];
+    if (matchedService) {
+      window.dispatchEvent(new CustomEvent('rfq:selectService', { detail: matchedService }));
+    }
     const target = document.getElementById('rfq-map');
     if (target) {
       const navOffset = 68;

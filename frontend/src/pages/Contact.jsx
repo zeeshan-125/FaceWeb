@@ -176,17 +176,6 @@ const serviceDivisions = [
       'High-Pressure Pumps & Compressors',
     ],
   },
-  {
-    id: 'epc',
-    label: 'Turnarounds & EPC',
-    icon: 'engineering',
-    items: [
-      'Plant Turnarounds & Shutdowns',
-      'Civil Infrastructure & Concrete',
-      'Multi-Megawatt Temporary Power',
-      'Specialized HazMat Waste Handling',
-    ],
-  },
 ];
 
 const allServiceItems = Array.from(

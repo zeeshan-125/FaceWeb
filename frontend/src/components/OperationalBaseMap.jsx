@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // Comprehensive Saudi Arabia Strategic Operational Bases (All displayed on a unified Kingdom map)
@@ -374,6 +374,16 @@ export default function OperationalBaseMap() {
     service: 'Industrial Services & High-Pressure Hydrojetting',
     scope: '',
   });
+
+  useEffect(() => {
+    const handleSelectService = (e) => {
+      if (e.detail) {
+        setRfqForm((prev) => ({ ...prev, service: e.detail }));
+      }
+    };
+    window.addEventListener('rfq:selectService', handleSelectService);
+    return () => window.removeEventListener('rfq:selectService', handleSelectService);
+  }, []);
   const [rfqSubmitted, setRfqSubmitted] = useState(false);
 
   const activeBase = allBases.find((b) => b.id === selectedBaseId) || allBases[1];
@@ -797,12 +807,6 @@ export default function OperationalBaseMap() {
                             </option>
                             <option value="Temporary Construction Facilities (TCF)">
                               Temporary Construction Facilities (TCF & Modular Units)
-                            </option>
-                            <option value="Plant Turnaround & Shutdown EPC">
-                              Plant Turnaround & Shutdown EPC
-                            </option>
-                            <option value="Multi-Service Turnkey Deployment">
-                              Multi-Service Turnkey Deployment
                             </option>
                           </select>
                         </div>
