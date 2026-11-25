@@ -810,17 +810,6 @@ export default function Contact() {
                     </div>
 
                     {/* Target Mobilization Date */}
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
-                        Target Mobilization Date
-                      </label>
-                      <input
-                        type="date"
-                        value={form.targetDate}
-                        onChange={(e) => setForm({ ...form, targetDate: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-brand-blue"
-                      />
-                    </div>
                   </div>
 
                   <div>
