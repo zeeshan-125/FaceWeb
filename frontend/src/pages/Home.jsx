@@ -179,9 +179,9 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
               { value: '15+', label: 'Years Experience', color: 'text-white' },
-              { value: '250+', label: 'Projects Completed', color: 'text-brand-green' },
-              { value: '1000+', label: 'Fleet Units', color: 'text-white' },
-              { value: '1000+', label: 'Skilled Workforce', color: 'text-brand-green' },
+              { value: '1000+', label: 'Projects Completed', color: 'text-brand-green' },
+              { value: '1200+', label: 'Fleet Units', color: 'text-white' },
+              { value: '1200+', label: 'Skilled Workforce', color: 'text-brand-green' },
             ].map((kpi, i) => (
               <div
                 key={i}

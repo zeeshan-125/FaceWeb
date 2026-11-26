@@ -324,6 +324,7 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
   // Synchronize state if URL query params or router location state change
@@ -406,12 +407,14 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
+    setIsSubmitting(true);
     try {
       const nameParts = (form.name || '').trim().split(' ');
       const firstName = nameParts[0] || 'Valued';
@@ -438,6 +441,8 @@ export default function Contact() {
       });
     } catch (err) {
       console.error('Failed to submit RFP to CRM:', err);
+    } finally {
+      setIsSubmitting(false);
     }
 
     setSubmitted(true);
@@ -871,10 +876,20 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-xl font-black text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/30 transition-all flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full py-4 px-6 rounded-xl font-black text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/30 transition-all flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    <span>Submit</span>
-                    <span className="material-symbols-outlined text-[18px]">send</span>
+                    {isSubmitting ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>Submitting...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Submit</span>
+                        <span className="material-symbols-outlined text-[18px]">send</span>
+                      </>
+                    )}
                   </button>
                 </form>
               )}

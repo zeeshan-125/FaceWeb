@@ -385,11 +385,14 @@ export default function OperationalBaseMap() {
     return () => window.removeEventListener('rfq:selectService', handleSelectService);
   }, []);
   const [rfqSubmitted, setRfqSubmitted] = useState(false);
+  const [rfqSubmitting, setRfqSubmitting] = useState(false);
 
   const activeBase = allBases.find((b) => b.id === selectedBaseId) || allBases[1];
 
   const handleRfqSubmit = async (e) => {
     e.preventDefault();
+    if (rfqSubmitting) return;
+    setRfqSubmitting(true);
 
     try {
       const nameParts = (rfqForm.name || '').trim().split(' ');
@@ -417,6 +420,8 @@ export default function OperationalBaseMap() {
       });
     } catch (err) {
       console.error('Failed to submit map RFQ to CRM:', err);
+    } finally {
+      setRfqSubmitting(false);
     }
 
     setRfqSubmitted(true);
@@ -869,12 +874,22 @@ export default function OperationalBaseMap() {
 
                           <button
                             type="submit"
-                            className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/25 hover:shadow-brand-blue/40 transition-all flex items-center justify-center gap-2 uppercase tracking-wider group"
+                            disabled={rfqSubmitting}
+                            className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue shadow-lg shadow-brand-blue/25 hover:shadow-brand-blue/40 transition-all flex items-center justify-center gap-2 uppercase tracking-wider group disabled:opacity-75 disabled:cursor-not-allowed"
                           >
-                            <span>Submit</span>
-                            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
-                              send
-                            </span>
+                            {rfqSubmitting ? (
+                              <>
+                                <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                <span>Submitting...</span>
+                              </>
+                            ) : (
+                              <>
+                                <span>Submit</span>
+                                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
+                                  send
+                                </span>
+                              </>
+                            )}
                           </button>
                         </div>
                       </form>
