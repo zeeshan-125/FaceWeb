@@ -12,7 +12,7 @@ const slides = [
     titleLine2: 'Recycling Solutions',
     subtitle: 'Hazardous · Non-Hazardous · Industrial · Commercial Waste',
     desc: 'Safe, compliant, and sustainable waste management solutions that protect people, the environment, and communities across Saudi Arabia. NCEC certified with Royal Commission & SWA approvals.',
-    actionLink: '/services',
+    actionLink: '/wms',
     actionText: 'WMS Services',
     action2Link: '#rfq-map',
     action2Text: 'Request a Quote',
