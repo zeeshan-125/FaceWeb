@@ -63,7 +63,7 @@ const slides = [
     actionText: 'View Equipment Fleet',
     action2Link: '#rfq-map',
     action2Text: 'Request a Quote',
-    stat: '180+',
+    stat: '1200+',
     statLabel: 'Fleet Units Ready',
   },
 ];
@@ -314,18 +314,12 @@ export default function HeroVideoSlider() {
                   ))}
                 </div>
               ) : (
-                <div className="grid grid-cols-3 gap-4 sm:gap-8 py-4 border-y border-white/15 w-full max-w-2xl bg-black/30 backdrop-blur-md rounded-2xl px-6 shadow-inner text-center">
+                <div className="grid grid-cols-2 gap-4 sm:gap-8 py-4 border-y border-white/15 w-full max-w-xl bg-black/30 backdrop-blur-md rounded-2xl px-6 shadow-inner text-center">
                   <div>
                     <div className="text-2xl sm:text-3xl font-black text-white">
                       <AnimatedCounter key={`stat-${current}-${activeSlide.stat || 'default'}`} value={activeSlide.stat || '100%'} duration={1200} delay={950} />
                     </div>
                     <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{activeSlide.statLabel || 'Site Solutions'}</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-black text-brand-green">
-                      <AnimatedCounter key={`lti-${current}`} value="0.00" duration={1100} delay={1050} />
-                    </div>
-                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">LTI Safety Rate</div>
                   </div>
                   <div>
                     <div className="text-2xl sm:text-3xl font-black text-blue-400">
