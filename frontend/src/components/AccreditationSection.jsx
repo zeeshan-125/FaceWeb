@@ -35,7 +35,7 @@ const accreditations = [
 ];
 
 const highlights = [
-  { stat: '300+', label: 'Satisfied Industrial Clients', sub: 'Petrochemical, EPC & Infrastructure partners' },
+  { stat: '1000+', label: 'Satisfied Industrial Clients', sub: 'Petrochemical, EPC & Infrastructure partners' },
   { stat: '1,500+', label: 'Heavy Assets Fleet', sub: 'Cranes, earthmovers, hydro-jets & multi-axles' },
   { stat: '0.00', label: 'Lost Time Incident Rate', sub: 'Uncompromising Aramco & TUV safety record' },
   { stat: '100%', label: 'Saudi Local Alignment', sub: 'Empowering Vision 2030 & IKTVA initiatives' },
@@ -63,9 +63,6 @@ export default function AccreditationSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase leading-[1.1] drop-shadow-md">
               Why Industry Leaders <span className="text-brand-green">Choose FACE</span>
             </h2>
-            <p className="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-sm font-medium">
-              We hold the highest national regulatory certifications in the Kingdom of Saudi Arabia, ensuring every shutdown, turnaround, heavy lift, and modular installation meets uncompromising safety standards.
-            </p>
           </div>
           <div className="lg:col-span-4 flex lg:justify-end">
           </div>

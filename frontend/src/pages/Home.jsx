@@ -25,7 +25,7 @@ const interactiveServices = [
     number: '02',
     title: 'Waste Management (WMS)',
     subtitle: 'Hazardous & Non-Hazardous Recycling',
-    category: 'NCEC Licensed HazMat',
+    category: 'MWAN & NCEC Approved',
     desc: 'NCEC-certified hazardous and non-hazardous waste management, vacuum tanker transport, and recycling solutions.',
     features: ['Hazardous & Non-Hazardous Disposal', 'Vacuum Tankers & Slurry Hauling', 'Royal Commission & SWA Approved'],
     image: '/images/wms/wms_recycling.jpg',
@@ -180,7 +180,7 @@ export default function Home() {
             {[
               { value: '15+', label: 'Years Experience', color: 'text-white' },
               { value: '250+', label: 'Projects Completed', color: 'text-brand-green' },
-              { value: '180+', label: 'Fleet Units', color: 'text-white' },
+              { value: '1000+', label: 'Fleet Units', color: 'text-white' },
               { value: '1000+', label: 'Skilled Workforce', color: 'text-brand-green' },
             ].map((kpi, i) => (
               <div

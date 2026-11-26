@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -95,42 +95,42 @@ const specializedTooling = [
   {
     title: '40,000 PSI High-Volume Pump Skids',
     category: 'Hydro-Blasting',
-    specs: 'Hammelmann / Woma Units â€¢ 40K PSI â€¢ 320 L/min',
+    specs: 'Hammelmann / Woma Units • 40K PSI • 320 L/min',
     desc: 'Heavy-duty diesel driven pressure pumps fitted with electronic burst discs, pneumatic dump guns, and wireless safety stops.',
     icon: 'speed',
   },
   {
     title: 'Hydraulic Aerial Bundle Extractors',
     category: 'Bundle Extraction',
-    specs: '35-Ton Pull Capacity â€¢ Self-Contained Diesel Power',
+    specs: '35-Ton Pull Capacity • Self-Contained Diesel Power',
     desc: 'Truck-mounted and crane-suspended pullers capable of extracting massive refinery heat exchanger bundles in under 20 minutes.',
     icon: 'forklift',
   },
   {
     title: 'Automated 3D Tank Cleaning Heads',
     category: 'Non-Entry TCS',
-    specs: 'StoneAge 3D Dual-Axis â€¢ 150 PSI Wash Feed',
+    specs: 'StoneAge 3D Dual-Axis • 150 PSI Wash Feed',
     desc: 'High-impact programmable rotary nozzles providing 360-degree impingement coverage to strip sludge without man-entry.',
     icon: 'autorenew',
   },
   {
     title: 'ATEX Zone-1 Chemical Circulation Skids',
     category: 'Chemical Decon',
-    specs: 'Stainless 316 Impellers â€¢ Explosion-Proof Motors',
+    specs: 'Stainless 316 Impellers • Explosion-Proof Motors',
     desc: 'High-temperature, chemical-resistant circulation pumps designed for safe operation inside live refinery battery limits.',
     icon: 'bolt',
   },
   {
     title: 'Calibrated Hydraulic Bolt Tensioning Skids',
     category: 'Flange Management',
-    specs: 'Up to 2,500 Bar Hydraulic Pressure â€¢ Multi-Stud',
+    specs: 'Up to 2,500 Bar Hydraulic Pressure • Multi-Stud',
     desc: 'Synchronized multi-stud tensioners ensuring leak-free flange connections verified by ultrasonic elongation monitoring.',
     icon: 'tune',
   },
   {
     title: 'Mobile Vapor Scrubbing & Neutralization Units',
     category: 'Environmental Compliance',
-    specs: 'Activated Carbon & Wet Scrubber â€¢ Dual-Bed',
+    specs: 'Activated Carbon & Wet Scrubber • Dual-Bed',
     desc: 'Captures and neutralizes hazardous emissions and mercaptans vented during vessel degassing and chemical steaming.',
     icon: 'filter_alt',
   },
@@ -161,7 +161,7 @@ export default function Services() {
 
   return (
     <div className="bg-white text-brand-slate selection:bg-brand-blue selection:text-white">
-      {/* â”€â”€ 1. CINEMATIC VIDEO HERO BANNER (Clean Light Theme) â”€â”€ */}
+      {/* ── 1. CINEMATIC VIDEO HERO BANNER (Clean Light Theme) ── */}
       <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 overflow-hidden bg-slate-50 border-b border-slate-200">
         {/* Looping Live Industrial Video Background */}
         <video
@@ -258,7 +258,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* â”€â”€ 2. SOVEREIGN ACCREDITATIONS & PRE-QUALIFICATIONS STRIP â”€â”€ */}
+      {/* ── 2. SOVEREIGN ACCREDITATIONS & PRE-QUALIFICATIONS STRIP ── */}
       <section className="py-6 bg-white border-b border-slate-200/90 text-slate-800">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -281,7 +281,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* â”€â”€ 3. INTERACTIVE 4-PILLAR INDUSTRIAL SERVICES SHOWCASE â”€â”€ */}
+      {/* ── 3. INTERACTIVE 4-PILLAR INDUSTRIAL SERVICES SHOWCASE ── */}
       <section className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-12">
           
@@ -338,7 +338,7 @@ export default function Services() {
                   {/* Bottom Image Caption */}
                   <div className="absolute bottom-4 left-4 right-4 z-10">
                     <div className="text-xs font-bold text-white/90 drop-shadow">
-                      FACE Industrial Services â€¢ Certified Petrochemical Operations
+                      FACE Industrial Services • Certified Petrochemical Operations
                     </div>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ export default function Services() {
                 <ul className="space-y-2">
                   {industrialDivisions[activeTab].features.map((feat, fIdx) => (
                     <li key={fIdx} className="text-xs sm:text-[13px] font-semibold text-slate-700 flex items-start gap-2.5">
-                      <span className="text-brand-blue font-black text-sm flex-shrink-0 mt-0.5">âœ“</span>
+                      <span className="text-brand-blue font-black text-sm flex-shrink-0 mt-0.5">✓</span>
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -422,7 +422,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* â”€â”€ COMPLETE INDUSTRIAL SERVICES GRID â”€â”€ */}
+      {/* ── COMPLETE INDUSTRIAL SERVICES GRID ── */}
       <section className="py-20 lg:py-28 bg-white border-b border-slate-200 relative overflow-hidden">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-12">
 
@@ -445,7 +445,7 @@ export default function Services() {
             {[
               { icon: 'science', title: 'Industrial Chemical Cleaning', desc: 'Complete chemical circulation services for pipelines, vessels, heat exchangers, and boilers using engineered chemistry solutions.' },
               { icon: 'water_drop', title: 'Hazardous Liquid Pumping & Handling', desc: 'Safe transfer and disposal of hazardous liquids including acids, caustics, and hydrocarbon slops with ATEX-rated equipment.' },
-              { icon: 'cleaning_services', title: 'Decontamination (Hydro Carbon)', desc: 'Vapor-phase and liquid-phase decontamination eliminating Hâ‚‚S, benzene, and pyrophoric iron sulfide deposits from vessels and columns.' },
+              { icon: 'cleaning_services', title: 'Decontamination (Hydro Carbon)', desc: 'Vapor-phase and liquid-phase decontamination eliminating H₂S, benzene, and pyrophoric iron sulfide deposits from vessels and columns.' },
               { icon: 'thermostat', title: 'Steaming Services', desc: 'Industrial steaming for pipeline purging, vessel decontamination, heat tracing, and pre-commissioning thermal conditioning.' },
               { icon: 'speed', title: 'High Pressure Water Jetting', desc: 'Ultra high-pressure hydrojetting up to 40,000 PSI for heat exchanger tubes, vessel internals, and pipeline descaling.' },
               { icon: 'delete_sweep', title: 'Tank Cleaning & Neutralization', desc: 'Automated non-entry and manual tank cleaning with sludge removal, hydrocarbon recovery, and pH neutralization.' },
@@ -488,7 +488,7 @@ export default function Services() {
       </section>
 
 
-      {/* â”€â”€ 5. SPECIALIZED INDUSTRIAL TOOLING & EQUIPMENT â”€â”€ */}
+      {/* ── 5. SPECIALIZED INDUSTRIAL TOOLING & EQUIPMENT ── */}
       <section className="py-20 lg:py-28 bg-white relative">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-12">
           
@@ -541,7 +541,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* â”€â”€ 6. FINAL 24/7 RAPID INDUSTRIAL MOBILIZATION & RFP BANNER â”€â”€ */}
+      {/* ── 6. FINAL 24/7 RAPID INDUSTRIAL MOBILIZATION & RFP BANNER ── */}
       <section className="py-20 lg:py-28 cta-section relative overflow-hidden text-white">
         <div className="absolute inset-0 grid-lines opacity-30 pointer-events-none" />
         <div className="reveal-up max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10">

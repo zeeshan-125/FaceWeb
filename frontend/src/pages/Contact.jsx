@@ -133,10 +133,18 @@ const serviceDivisions = [
     label: 'Industrial Services',
     icon: 'precision_manufacturing',
     items: [
-      'Ultra High-Pressure (UHP) Hydrojetting',
-      'Steaming, Oil Flushing & Pre-Commissioning',
-      'Chemical Cleaning & Decontamination',
-      'Non-Entry Tank Cleaning & Sludge Pumping',
+      'Industrial Chemical Cleaning',
+      'Hazardous Liquid Pumping / Handling',
+      'Decontamination (Hydro Carbon)',
+      'Steaming Services',
+      'High Pressure Water Jetting',
+      'Tank Cleaning and Neutralization',
+      'Disinfection Services Pumps',
+      'Pre Commissioning',
+      'Lube/Seal/Hydraulic Oil Flushing',
+      'Rental of Industrial Equipment',
+      'Particle Filtration',
+      'Dewatering Pumps',
     ],
   },
   {
@@ -640,7 +648,7 @@ export default function Contact() {
                       <div className="sm:col-span-7 p-3.5 rounded-2xl bg-slate-50/70 border border-slate-200/90">
 
                         {/* Services List in Picture 1 Pill Style */}
-                        <div className="flex flex-col gap-1.5">
+                        <div className="grid grid-cols-2 gap-1.5">
                           {(serviceDivisions.find((d) => d.id === activeDivision)?.items || []).map((srv) => {
                             const isSelected = selectedServices.includes(srv);
                             return (

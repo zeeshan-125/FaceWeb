@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 import Breadcrumb from '../components/Breadcrumb';
@@ -145,8 +145,8 @@ export default function Equipment() {
 
   return (
     <div className="bg-white text-slate-900 selection:bg-brand-blue selection:text-white">
-      {/* â”€â”€ 1. CLEAN 2-COLUMN SPLIT FLEET HERO WITH AMBIENT BACKGROUND VIDEO â”€â”€ */}
-      <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 border-b border-slate-200">        {/* Video clipped by its own wrapper â€” section has no overflow boundary so scroll events pass through */}
+      {/* ── 1. CLEAN 2-COLUMN SPLIT FLEET HERO WITH AMBIENT BACKGROUND VIDEO ── */}
+      <section className="relative min-h-[520px] lg:min-h-[580px] pt-28 pb-16 border-b border-slate-200">        {/* Video clipped by its own wrapper — section has no overflow boundary so scroll events pass through */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             autoPlay
@@ -216,7 +216,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* â”€â”€ 2. HIGH-VISIBILITY FLEET FILTER CONTROL CENTER (Clean Light Theme) â”€â”€ */}
+      {/* ── 2. HIGH-VISIBILITY FLEET FILTER CONTROL CENTER (Clean Light Theme) ── */}
       <section className="py-8 bg-slate-50/90 border-b border-slate-200 relative z-20">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 space-y-6">
           {/* Header & Search Controls */}
@@ -249,7 +249,7 @@ export default function Equipment() {
                   className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-xs bg-slate-100 rounded-full w-5 h-5 flex items-center justify-center"
                   aria-label="Clear search"
                 >
-                  âœ•
+                  ✕
                 </button>
               )}
             </div>
@@ -321,7 +321,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* â”€â”€ 3. FLEET SPECIFICATION CARDS GRID â”€â”€ */}
+      {/* ── 3. FLEET SPECIFICATION CARDS GRID ── */}
       <section className="py-20 lg:py-28 bg-slate-50 border-b border-slate-200">
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14">
           {filteredCategories.length === 0 ? (
@@ -426,7 +426,7 @@ export default function Equipment() {
       </div>
     </section>
 
-      {/* â”€â”€ 4. INTERACTIVE MOBILIZATION ESTIMATOR TOOL (Cool Dynamic Widget) â”€â”€ */}
+      {/* ── 4. INTERACTIVE MOBILIZATION ESTIMATOR TOOL (Cool Dynamic Widget) ── */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden reveal">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
@@ -445,7 +445,7 @@ export default function Equipment() {
                 <label className="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">1. Select Asset Class</label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                   {[
-                    { id: 'cranes', label: '50Tâ€“500T Mobile Cranes' },
+                    { id: 'cranes', label: '50T–500T Mobile Cranes' },
                     { id: 'transport', label: 'Heavy Lowbeds & SPMT' },
                     { id: 'earthmoving', label: 'Excavators & Bulldozers' },
                     { id: 'power', label: 'Multi-MW Generators' },
@@ -532,7 +532,7 @@ export default function Equipment() {
         </div>
       </section>
 
-      {/* â”€â”€ 5. OEM BRANDS SHOWCASE â”€â”€ */}
+      {/* ── 5. OEM BRANDS SHOWCASE ── */}
     </div>
   );
 }
