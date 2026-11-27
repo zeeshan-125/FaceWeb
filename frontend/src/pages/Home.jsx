@@ -10,19 +10,8 @@ import useReveal from '../hooks/useReveal';
 // 6 Core Interactive Service Cards
 const interactiveServices = [
   {
-    id: 'industrial',
-    number: '01',
-    title: 'Industrial Services',
-    subtitle: 'High-Pressure Water Jetting & Chemical Cleaning',
-    category: 'High-Pressure & Cleaning',
-    desc: 'Specialized industrial services including high-pressure water jetting up to 40,000 PSI, industrial chemical cleaning, tank neutralization, and hydrocarbon decontamination.',
-    features: ['40,000 PSI High-Pressure Water Jetting', 'Industrial Chemical Cleaning & Flushing', 'Tank Cleaning & Hydrocarbon Decontamination'],
-    image: '/images/services/services_hydrojetting.jpg',
-    link: '/services',
-  },
-  {
     id: 'wms',
-    number: '02',
+    number: '01',
     title: 'Waste Management (WMS)',
     subtitle: 'Hazardous & Non-Hazardous Recycling',
     category: 'MWAN & NCEC Approved',
@@ -30,6 +19,17 @@ const interactiveServices = [
     features: ['Hazardous & Non-Hazardous Disposal', 'Vacuum Tankers & Slurry Hauling', 'Royal Commission & SWA Approved'],
     image: '/images/wms/wms_recycling.jpg',
     link: '/wms',
+  },
+  {
+    id: 'industrial',
+    number: '02',
+    title: 'Industrial Services',
+    subtitle: 'High-Pressure Water Jetting & Chemical Cleaning',
+    category: 'High-Pressure & Cleaning',
+    desc: 'Specialized industrial services including high-pressure water jetting up to 40,000 PSI, industrial chemical cleaning, tank neutralization, and hydrocarbon decontamination.',
+    features: ['40,000 PSI High-Pressure Water Jetting', 'Industrial Chemical Cleaning & Flushing', 'Tank Cleaning & Hydrocarbon Decontamination'],
+    image: '/images/services/services_hydrojetting.jpg',
+    link: '/services',
   },
   {
     id: 'heavy-equipment',
@@ -176,12 +176,13 @@ export default function Home() {
       {/* ── 3. KPI STATS STRIP ── */}
       <section className="bg-[#07101e] border-b border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-white/10">
             {[
               { value: '15+', label: 'Years Experience', color: 'text-white' },
-              { value: '1000+', label: 'Projects Completed', color: 'text-brand-green' },
-              { value: '1200+', label: 'Fleet Units', color: 'text-white' },
-              { value: '1200+', label: 'Skilled Workforce', color: 'text-brand-green' },
+              { value: '250+', label: 'Satisfied Clients', color: 'text-brand-green' },
+              { value: '1000+', label: 'Projects Completed', color: 'text-white' },
+              { value: '1200+', label: 'Fleet Units', color: 'text-brand-green' },
+              { value: '800+', label: 'Skilled Workforce', color: 'text-white' },
             ].map((kpi, i) => (
               <div
                 key={i}

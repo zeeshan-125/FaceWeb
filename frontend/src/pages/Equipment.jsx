@@ -277,15 +277,6 @@ export default function Equipment() {
                     {cat.icon}
                   </span>
                   <span className="tracking-tight uppercase whitespace-nowrap">{cat.label}</span>
-                  <span
-                    className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full transition-colors ${
-                      isActive
-                        ? 'bg-white/20 text-white'
-                        : 'bg-slate-100 text-slate-500 group-hover:bg-blue-50 group-hover:text-brand-blue'
-                    }`}
-                  >
-                    {cat.count}
-                  </span>
                 </button>
               );
             })}

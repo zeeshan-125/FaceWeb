@@ -842,6 +842,9 @@ export default function OperationalBaseMap() {
                             <option value="Temporary Construction Facilities (TCF)">
                               Temporary Construction Facilities (TCF & Modular Units)
                             </option>
+                            <option value="FMCS (Facility Management & Catering Services)">
+                              FMCS (Facility Management & Catering Services)
+                            </option>
                           </select>
                         </div>
 

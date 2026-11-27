@@ -9,7 +9,7 @@ const timeline = [
   { year: '2016', label: 'ISO Triple Certification', col: 'bg-brand-green', text: 'Achieved simultaneous ISO 9001, 14001 and 45001 certification. Expanded operations to Western Region with Yanbu hub opening.' },
   { year: '2019', label: 'Modular Camps EPC', col: 'bg-brand-blue', text: 'Entered the modular accommodation EPC market. Delivered first 3,000-resident camp for a NEOM contractor in Tabuk region within 75 days.' },
   { year: '2023', label: '2,500+ Fleet Milestone', col: 'bg-brand-green', text: 'Fleet surpassed 2,500 assets. Riyadh hub opened. Achieved 0.00 LTI record across 5 million+ man-hours. SABIC EPC prequalification awarded.' },
-  { year: 'Today', label: 'Vision 2030 Partner', col: 'bg-gradient-to-r from-brand-blue to-brand-green', text: '10 regional base stations across the Kingdom. 5,000+ workforce. Active contracts on NEOM, Red Sea Project, Jubail II, and multiple Aramco mega TAs.' },
+  { year: 'Today', label: 'Vision 2030 Partner', col: 'bg-gradient-to-r from-brand-blue to-brand-green', text: '10 regional base stations across the Kingdom. 800+ workforce. Active contracts on NEOM, Red Sea Project, Jubail II, and multiple Aramco mega TAs.' },
 ];
 
 const certs = [
@@ -65,7 +65,7 @@ export default function About() {
             </div>
             <div className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 backdrop-blur-md">
               <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Certified Workforce</div>
-              <div className="text-xl font-black text-brand-green">5,000+ Staff</div>
+              <div className="text-xl font-black text-brand-green">800+ Staff</div>
             </div>
             <div className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 backdrop-blur-md">
               <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Strategic Bases</div>

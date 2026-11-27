@@ -186,7 +186,7 @@ const serviceDivisions = [
   },
   {
     id: 'fmcs',
-    label: 'Facility Management & Catering (FMCS)',
+    label: 'FMCS (Facility Management & Catering Services)',
     icon: 'restaurant',
     items: [
       'Hard & Soft Facility Management (HVAC & MEP)',
